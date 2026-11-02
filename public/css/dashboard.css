@@ -1,0 +1,452 @@
+
+/* ==============================
+   General Settings
+================================ */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: "Segoe UI", Arial, sans-serif;
+    background: #f3f6fb;
+    color: #263247;
+    line-height: 1.6;
+}
+
+.container {
+    width: 92%;
+    max-width: 1200px;
+    margin: auto;
+}
+
+/* ==============================
+   Navigation
+================================ */
+.topbar {
+    background: linear-gradient(135deg, #1746a2, #3275d8);
+    color: white;
+    padding: 17px 0;
+    box-shadow: 0 3px 12px rgba(0, 0, 0, .12);
+}
+
+.nav-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 15px;
+}
+
+.brand {
+    color: white;
+    text-decoration: none;
+    font-size: 23px;
+    font-weight: 700;
+}
+
+.brand:hover {
+    color: #e2eaff;
+}
+
+/* ==============================
+   Main Page
+================================ */
+.page {
+    padding-top: 35px;
+    padding-bottom: 45px;
+}
+
+h1 {
+    color: #173d80;
+    font-size: 30px;
+    margin-bottom: 8px;
+}
+
+h2,
+h3 {
+    color: #244779;
+}
+
+.muted {
+    color: #718096;
+    margin-bottom: 25px;
+}
+
+/* ==============================
+   Cards
+================================ */
+.card {
+    background: white;
+    border: 1px solid #e3eaf4;
+    border-radius: 13px;
+    overflow: hidden;
+    margin-bottom: 22px;
+    box-shadow: 0 5px 18px rgba(30, 60, 100, .07);
+}
+
+.card-header {
+    padding: 16px 20px;
+    background: #eaf1ff;
+    border-bottom: 1px solid #dce6f5;
+}
+
+.card-header h2 {
+    margin: 0;
+    font-size: 19px;
+}
+
+.card-body {
+    padding: 22px;
+}
+
+/* ==============================
+   Dashboard Grid
+================================ */
+.dashboard-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 24px;
+    align-items: start;
+}
+
+@media (min-width: 1101px) {
+    .dashboard-grid {
+        grid-template-columns: 340px minmax(0, 1fr);
+    }
+}
+
+/* ==============================
+   Forms
+================================ */
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 -8px;
+}
+
+.g-3 {
+    row-gap: 18px;
+}
+
+.col-md-6,
+.col-12 {
+    width: 100%;
+    padding: 0 8px;
+}
+
+@media (min-width: 768px) {
+    .col-md-6 {
+        width: 50%;
+    }
+}
+
+.form-label {
+    display: block;
+    font-weight: 600;
+    margin-bottom: 7px;
+    color: #34445e;
+}
+
+.form-control,
+.form-select {
+    display: block;
+    width: 100%;
+    min-width: 0;
+    padding: 11px 13px;
+    border: 1px solid #ccd6e5;
+    border-radius: 8px;
+    background: white;
+    color: #263247;
+    font-size: 15px;
+}
+
+.form-control:focus,
+.form-select:focus {
+    outline: none;
+    border-color: #3275d8;
+    box-shadow: 0 0 0 3px rgba(50, 117, 216, .13);
+}
+
+.is-invalid {
+    border-color: #d12f40;
+}
+
+/* ==============================
+   Fields and Actions
+================================ */
+.field {
+    margin-bottom: 16px;
+}
+
+.field strong {
+    display: block;
+    color: #34445e;
+    margin-bottom: 5px;
+}
+
+.field p {
+    margin: 0;
+}
+
+.actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+/* ==============================
+   Buttons
+================================ */
+.btn,
+.btn-primary,
+.btn-danger,
+.btn-neutral,
+.btn-light,
+.btn-secondary {
+    display: inline-block;
+    border: none;
+    border-radius: 8px;
+    padding: 10px 17px;
+    cursor: pointer;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 600;
+    transition: .2s ease;
+}
+
+.btn-primary {
+    background: #2866c7;
+    color: white;
+}
+
+.btn-primary:hover {
+    background: #174b9d;
+}
+
+.btn-danger {
+    background: #d94350;
+    color: white;
+}
+
+.btn-danger:hover {
+    background: #b82d3b;
+}
+
+.btn-neutral,
+.btn-secondary {
+    background: #68778b;
+    color: white;
+}
+
+.btn-neutral:hover,
+.btn-secondary:hover {
+    background: #4c596b;
+}
+
+.btn-light {
+    background: white;
+    color: #174b9d;
+}
+
+.btn-light:hover {
+    background: #e9efff;
+}
+
+/* ==============================
+   Notices
+================================ */
+.notice,
+.alert {
+    padding: 13px 16px;
+    border-radius: 8px;
+    margin: 15px 0;
+}
+
+.success,
+.alert-success {
+    background: #e4f7eb;
+    border: 1px solid #b8e5c7;
+    color: #176b38;
+}
+
+.error,
+.alert-danger {
+    background: #fff0f0;
+    border: 1px solid #f0c1c1;
+    color: #b42332;
+}
+
+.notice ul {
+    margin-bottom: 0;
+    padding-left: 22px;
+}
+
+/* ==============================
+   Validation
+================================ */
+.invalid-feedback {
+    display: block;
+    color: #d12f40;
+    font-size: 13px;
+    margin-top: 5px;
+}
+
+/* ==============================
+   Courses Table
+================================ */
+.table-wrap {
+    width: 100%;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+}
+
+.table {
+    width: 100%;
+    min-width: 650px;
+    border-collapse: collapse;
+    text-align: left;
+}
+
+.table th,
+.table td {
+    padding: 13px 11px;
+    border: 1px solid #e1e7f0;
+    vertical-align: middle;
+}
+
+.table thead {
+    background: #eaf1ff;
+    color: #244779;
+}
+
+.table tbody tr:nth-child(even) {
+    background: #f7f9fd;
+}
+
+.table tbody tr:hover {
+    background: #edf4ff;
+}
+
+.table tbody tr.editing-row {
+    background: #fff3cd;
+    outline: 2px solid #e6b94c;
+    outline-offset: -2px;
+}
+
+.table a {
+    color: #2465bd;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.table a:hover {
+    text-decoration: underline;
+}
+
+.table button {
+    border: none;
+    background: transparent;
+    color: #d13e4c;
+    cursor: pointer;
+    font-weight: 600;
+    font-size: 14px;
+}
+
+.table button:hover {
+    text-decoration: underline;
+}
+
+/* ==============================
+   Course Details
+================================ */
+.details {
+    margin-top: 25px;
+    padding: 22px;
+}
+
+.details-header {
+    margin-bottom: 20px;
+}
+
+.details-header h2 {
+    margin-top: 0;
+}
+
+.course-name {
+    display: inline-block;
+    color: #2866c7;
+    font-weight: 700;
+    font-size: 18px;
+}
+
+.detail-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 18px;
+}
+
+.detail-grid .field {
+    background: #f7f9fd;
+    border: 1px solid #e3eaf4;
+    border-radius: 9px;
+    padding: 14px;
+    margin-bottom: 0;
+}
+
+/* ==============================
+   Responsive Design
+================================ */
+@media (max-width: 1100px) {
+    .dashboard-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 600px) {
+    .container {
+        width: 94%;
+    }
+
+    .brand {
+        font-size: 19px;
+    }
+
+    h1 {
+        font-size: 24px;
+    }
+
+    .page {
+        padding-top: 22px;
+    }
+
+    .card-header {
+        padding: 13px 15px;
+    }
+
+    .card-body {
+        padding: 15px;
+    }
+
+    .nav-row {
+        flex-wrap: wrap;
+    }
+
+    .detail-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .actions {
+        flex-direction: column;
+    }
+
+    .actions a,
+    .actions button {
+        text-align: center;
+        width: 100%;
+    }
+
+    .details {
+        padding: 15px;
+    }
+}
